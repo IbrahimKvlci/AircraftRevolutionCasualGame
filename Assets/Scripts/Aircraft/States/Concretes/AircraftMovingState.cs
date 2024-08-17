@@ -27,6 +27,7 @@ public class AircraftMovingState : AircraftStateBase
         base.UpdateState();
 
         HandleMovement();
+        _aircraft.AircraftIdleShootingController.HandleIdleShooting();
     }
 
     public override void ExitState()
@@ -38,17 +39,17 @@ public class AircraftMovingState : AircraftStateBase
     {
         _aircraftMovementService.HandleMovement(_aircraft,_aircraft.AircraftSO.speed);
 
-        if (_inputService.AircraftTurnRightKeyDown()&&!isTurning)
+        if (_inputService.AircraftTurnRightKeyDown()&&!isTurning&&!_aircraft.AircraftTriggerController.CheckIsThereBarrier(AircraftTriggerController.BarrierLocationEnum.Right))
         {
             isTurning = true;
             turningStartingPos = _aircraft.transform.position;
-            turningEndPos = _aircraft.transform.position + Vector3.right * 5;
+            turningEndPos = _aircraft.transform.position + Vector3.right * 15f;
         }
-        else if(_inputService.AircraftTurnLeftKeyDown() && !isTurning)
+        else if(_inputService.AircraftTurnLeftKeyDown() && !isTurning&&!_aircraft.AircraftTriggerController.CheckIsThereBarrier(AircraftTriggerController.BarrierLocationEnum.Left))
         {
             isTurning = true;
             turningStartingPos = _aircraft.transform.position;
-            turningEndPos = _aircraft.transform.position + Vector3.left * 5;
+            turningEndPos = _aircraft.transform.position + Vector3.left * 15f;
         }
 
         if (isTurning)

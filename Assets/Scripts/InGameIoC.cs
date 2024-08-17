@@ -8,6 +8,7 @@ public class InGameIoC : MonoBehaviour
 
     public IInputService InputService { get; set; }
     public IAircraftMovementService AircraftMovementService { get; set; }
+    public IAircraftShootingService AircraftShootingService { get; set; }
 
     private void Awake()
     {
@@ -15,5 +16,6 @@ public class InGameIoC : MonoBehaviour
 
         InputService=InputManager.Instance;
         AircraftMovementService = new TAircraftMovementManager();
+        AircraftShootingService = new AircraftShootingManager();
     }
 }

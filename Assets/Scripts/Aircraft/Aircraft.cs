@@ -5,6 +5,8 @@ using UnityEngine;
 public class Aircraft : MonoBehaviour
 {
     [field:SerializeField] public AircraftSO AircraftSO {  get; set; }
+    [field:SerializeField] public AircraftTriggerController AircraftTriggerController { get; set; }
+    [field:SerializeField] public AircraftIdleShootingController AircraftIdleShootingController { get; set; }
 
     public IAircraftState AircraftFreezingState { get; set; }
     public IAircraftState AircraftMovingState { get; set; }

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78535e05103f98a4ba25e45bfeaa12f7, type: 3}
   m_Name: RaptorSO
   m_EditorClassIdentifier: 
-  speed: 5
-  attackDamage: 1
-  attackSpeed: 1
+  speed: 10
+  idleAttackDamage: 0.5
+  rocketAttackDamage: 1
+  idleShootingDurationTime: 0.05
   turningTime: 0.5

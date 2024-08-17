@@ -70,6 +70,34 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Camera"",
+            ""id"": ""78b38081-ce02-43b9-9052-215d8f3dfe47"",
+            ""actions"": [
+                {
+                    ""name"": ""MousePos"",
+                    ""type"": ""Value"",
+                    ""id"": ""aa578e19-53fd-4bef-987d-c9cf3995c20a"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""93be8eaa-b32f-42c5-ae54-6c1beed20c5a"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePos"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -78,6 +106,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Aircraft = asset.FindActionMap("Aircraft", throwIfNotFound: true);
         m_Aircraft_TurningLeft = m_Aircraft.FindAction("TurningLeft", throwIfNotFound: true);
         m_Aircraft_TurningRight = m_Aircraft.FindAction("TurningRight", throwIfNotFound: true);
+        // Camera
+        m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
+        m_Camera_MousePos = m_Camera.FindAction("MousePos", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -189,9 +220,59 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         }
     }
     public AircraftActions @Aircraft => new AircraftActions(this);
+
+    // Camera
+    private readonly InputActionMap m_Camera;
+    private List<ICameraActions> m_CameraActionsCallbackInterfaces = new List<ICameraActions>();
+    private readonly InputAction m_Camera_MousePos;
+    public struct CameraActions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public CameraActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MousePos => m_Wrapper.m_Camera_MousePos;
+        public InputActionMap Get() { return m_Wrapper.m_Camera; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CameraActions set) { return set.Get(); }
+        public void AddCallbacks(ICameraActions instance)
+        {
+            if (instance == null || m_Wrapper.m_CameraActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_CameraActionsCallbackInterfaces.Add(instance);
+            @MousePos.started += instance.OnMousePos;
+            @MousePos.performed += instance.OnMousePos;
+            @MousePos.canceled += instance.OnMousePos;
+        }
+
+        private void UnregisterCallbacks(ICameraActions instance)
+        {
+            @MousePos.started -= instance.OnMousePos;
+            @MousePos.performed -= instance.OnMousePos;
+            @MousePos.canceled -= instance.OnMousePos;
+        }
+
+        public void RemoveCallbacks(ICameraActions instance)
+        {
+            if (m_Wrapper.m_CameraActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ICameraActions instance)
+        {
+            foreach (var item in m_Wrapper.m_CameraActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_CameraActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public CameraActions @Camera => new CameraActions(this);
     public interface IAircraftActions
     {
         void OnTurningLeft(InputAction.CallbackContext context);
         void OnTurningRight(InputAction.CallbackContext context);
+    }
+    public interface ICameraActions
+    {
+        void OnMousePos(InputAction.CallbackContext context);
     }
 }

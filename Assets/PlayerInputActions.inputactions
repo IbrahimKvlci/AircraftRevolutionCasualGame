@@ -48,6 +48,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Camera",
+            "id": "78b38081-ce02-43b9-9052-215d8f3dfe47",
+            "actions": [
+                {
+                    "name": "MousePos",
+                    "type": "Value",
+                    "id": "aa578e19-53fd-4bef-987d-c9cf3995c20a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "93be8eaa-b32f-42c5-ae54-6c1beed20c5a",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MousePos",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
