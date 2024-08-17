@@ -1,0 +1,54 @@
+{
+    "name": "PlayerInputActions",
+    "maps": [
+        {
+            "name": "Aircraft",
+            "id": "64368350-e0cf-4752-ae84-d6f800059d64",
+            "actions": [
+                {
+                    "name": "TurningLeft",
+                    "type": "Button",
+                    "id": "2e906fb4-feac-47fd-a798-8414c8695081",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TurningRight",
+                    "type": "Button",
+                    "id": "f8bf02a7-4857-4841-bbeb-ee8e19b08d32",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0169f7d5-0974-498e-bc05-90b9e6b24321",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TurningLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "754596d8-0861-4212-bb00-7e75aa2ebc0e",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TurningRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
