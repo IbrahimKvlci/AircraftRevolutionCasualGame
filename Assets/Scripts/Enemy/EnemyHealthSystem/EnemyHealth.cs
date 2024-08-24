@@ -15,4 +15,8 @@ public class EnemyHealth
         }
         Debug.Log("Damaged");
     }
+    public void SetHealthByLevel(float healthMultiplier,int level)
+    {
+        Health = healthMultiplier*level;
+    }
 }
