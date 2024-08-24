@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RaptorSO
   m_EditorClassIdentifier: 
   speed: 10
+  turningSpeed: 20
   idleAttackDamage: 0.5
   rocketAttackDamage: 1
   idleShootingDurationTime: 0.05

@@ -16,7 +16,7 @@ public class InGameIoC : MonoBehaviour
         Instance = this;
 
         InputService=InputManager.Instance;
-        AircraftMovementService = new TAircraftMovementManager();
+        AircraftMovementService = new TAircraftMovementManager(InputService);
         AircraftShootingService = new AircraftShootingManager();
         EnemyMovementService= new EnemyMovementManager();
     }

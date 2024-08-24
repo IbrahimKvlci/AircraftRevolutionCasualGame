@@ -18,6 +18,8 @@ public class InputManager :MonoBehaviour, IInputService
         inputActions.Enable();
 
         inputActions.Camera.MousePos.performed += MousePos_performed;
+
+
     }
 
     private void MousePos_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
@@ -54,5 +56,10 @@ public class InputManager :MonoBehaviour, IInputService
     public Vector3 GetMousePositionOnWorldPoint()
     {
         return Camera.main.ScreenToWorldPoint(_mousePosition);
+    }
+
+    public Vector2 GetTurningInput()
+    {
+        return inputActions.Aircraft.TurningByVector.ReadValue<Vector2>();
     }
 }

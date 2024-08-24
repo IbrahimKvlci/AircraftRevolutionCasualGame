@@ -6,6 +6,7 @@ using UnityEngine;
 public class AircraftSO : ScriptableObject
 {
     public float speed;
+    public float turningSpeed;
     public float idleAttackDamage;
     public float rocketAttackDamage;
     public float idleShootingDurationTime;

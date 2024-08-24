@@ -44,6 +44,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TurningByVector"",
+                    ""type"": ""Value"",
+                    ""id"": ""b5f52a6b-0715-4bce-92a7-6acc8132b0fa"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -68,6 +77,39 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""TurningRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""5ef78269-75d7-468f-8e2c-23656a1e9e0e"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurningByVector"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""fb34109c-9b46-4232-8a66-5d33339ba057"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurningByVector"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""192a5ab0-74a5-49ab-90e3-76f118c8e538"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurningByVector"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -106,6 +148,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Aircraft = asset.FindActionMap("Aircraft", throwIfNotFound: true);
         m_Aircraft_TurningLeft = m_Aircraft.FindAction("TurningLeft", throwIfNotFound: true);
         m_Aircraft_TurningRight = m_Aircraft.FindAction("TurningRight", throwIfNotFound: true);
+        m_Aircraft_TurningByVector = m_Aircraft.FindAction("TurningByVector", throwIfNotFound: true);
         // Camera
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_MousePos = m_Camera.FindAction("MousePos", throwIfNotFound: true);
@@ -172,12 +215,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private List<IAircraftActions> m_AircraftActionsCallbackInterfaces = new List<IAircraftActions>();
     private readonly InputAction m_Aircraft_TurningLeft;
     private readonly InputAction m_Aircraft_TurningRight;
+    private readonly InputAction m_Aircraft_TurningByVector;
     public struct AircraftActions
     {
         private @PlayerInputActions m_Wrapper;
         public AircraftActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @TurningLeft => m_Wrapper.m_Aircraft_TurningLeft;
         public InputAction @TurningRight => m_Wrapper.m_Aircraft_TurningRight;
+        public InputAction @TurningByVector => m_Wrapper.m_Aircraft_TurningByVector;
         public InputActionMap Get() { return m_Wrapper.m_Aircraft; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -193,6 +238,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @TurningRight.started += instance.OnTurningRight;
             @TurningRight.performed += instance.OnTurningRight;
             @TurningRight.canceled += instance.OnTurningRight;
+            @TurningByVector.started += instance.OnTurningByVector;
+            @TurningByVector.performed += instance.OnTurningByVector;
+            @TurningByVector.canceled += instance.OnTurningByVector;
         }
 
         private void UnregisterCallbacks(IAircraftActions instance)
@@ -203,6 +251,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @TurningRight.started -= instance.OnTurningRight;
             @TurningRight.performed -= instance.OnTurningRight;
             @TurningRight.canceled -= instance.OnTurningRight;
+            @TurningByVector.started -= instance.OnTurningByVector;
+            @TurningByVector.performed -= instance.OnTurningByVector;
+            @TurningByVector.canceled -= instance.OnTurningByVector;
         }
 
         public void RemoveCallbacks(IAircraftActions instance)
@@ -270,6 +321,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     {
         void OnTurningLeft(InputAction.CallbackContext context);
         void OnTurningRight(InputAction.CallbackContext context);
+        void OnTurningByVector(InputAction.CallbackContext context);
     }
     public interface ICameraActions
     {

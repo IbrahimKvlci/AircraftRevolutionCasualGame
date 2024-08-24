@@ -14,16 +14,14 @@ public class Aircraft : MonoBehaviour
 
     private IAircraftStateService _aircraftStateService;
     private IAircraftMovementService _aircraftMovementService;
-    private IInputService _inputService;
 
     private void Awake()
     {
-        _inputService=InGameIoC.Instance.InputService;
         _aircraftStateService = new AircraftStateManager();
         _aircraftMovementService=InGameIoC.Instance.AircraftMovementService;
 
         AircraftFreezingState = new AircraftFreezingState(this, _aircraftStateService);
-        AircraftMovingState=new AircraftMovingState(this, _aircraftStateService,_aircraftMovementService,_inputService);
+        AircraftMovingState=new AircraftMovingState(this, _aircraftStateService,_aircraftMovementService);
         AircraftRevolutionState=new AircraftRevolutionState(this, _aircraftStateService);
     }
 
