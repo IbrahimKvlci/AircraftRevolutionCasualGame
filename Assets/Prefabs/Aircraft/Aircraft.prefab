@@ -311,6 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5754775235998287336}
   - component: {fileID: 6714213544559798423}
+  - component: {fileID: 7289712058862474229}
   m_Layer: 0
   m_Name: Aircraft
   m_TagString: Untagged
@@ -354,6 +355,27 @@ MonoBehaviour:
     type: 2}
   <AircraftTriggerController>k__BackingField: {fileID: 4536896638218317208}
   <AircraftIdleShootingController>k__BackingField: {fileID: 7135395650774635841}
+--- !u!65 &7289712058862474229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027015648525080610}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.223228, y: 2.7772272, z: 20.701826}
+  m_Center: {x: -0.039413452, y: 1.283553, z: 1.1356287}
 --- !u!1 &2514699868711447675
 GameObject:
   m_ObjectHideFlags: 0

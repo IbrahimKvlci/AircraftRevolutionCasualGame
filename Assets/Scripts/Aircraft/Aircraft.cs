@@ -8,6 +8,8 @@ public class Aircraft : MonoBehaviour
     [field:SerializeField] public AircraftTriggerController AircraftTriggerController { get; set; }
     [field:SerializeField] public AircraftIdleShootingController AircraftIdleShootingController { get; set; }
 
+    public int Level { get; set; }
+
     public IAircraftState AircraftFreezingState { get; set; }
     public IAircraftState AircraftMovingState { get; set; }
     public IAircraftState AircraftRevolutionState { get; set; }
@@ -33,5 +35,10 @@ public class Aircraft : MonoBehaviour
     private void Update()
     {
         _aircraftStateService.CurrentAircraftState.UpdateState();   
+    }
+
+    public void AddLevel(int level)
+    {
+        Level += level;
     }
 }
