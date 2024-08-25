@@ -17,18 +17,21 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnemySpawnerService _enemySpawnerService;
 
+    public static EnemySpawner Instance { get; set; }
+
     private void Awake()
     {
+        Instance = this;
+
         _enemySpawnerService = InGameIoC.Instance.EnemySpawnerService;
     }
 
     private void Start()
     {
-        SpawnEnemyAtRandomPointAwayFromAircraft();
         timerMax = spawningTimerDurationMax;
     }
 
-    private void Update()
+    public void HandleEnemySpawn()
     {
         timer += Time.deltaTime;
         if (timer >= timerMax)

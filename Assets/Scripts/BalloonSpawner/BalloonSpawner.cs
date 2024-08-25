@@ -17,8 +17,12 @@ public class BalloonSpawner : MonoBehaviour
   
     private IBalloonSpawnerService _balloonSpawnerService;
 
+    public static BalloonSpawner Instance { get; set; }
+
     private void Awake()
     {
+        Instance= this;
+
         _balloonSpawnerService = InGameIoC.Instance.BalloonSpawnerService;
     }
 
@@ -27,7 +31,8 @@ public class BalloonSpawner : MonoBehaviour
         timerMax=Random.Range(balloonSpawningTimeMin,balloonSpawningTimeMax);
     }
 
-    private void Update()
+
+    public void HandleBalloonSpawn()
     {
         timer += Time.deltaTime;
         if (timer >= timerMax)
