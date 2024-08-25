@@ -10,6 +10,7 @@ public class InGameIoC : MonoBehaviour
     public IAircraftMovementService AircraftMovementService { get; set; }
     public IAircraftShootingService AircraftShootingService { get; set; }
     public IEnemyMovementService EnemyMovementService { get; set; }
+    public IEnemySpawnerService EnemySpawnerService { get; set; }
 
     private void Awake()
     {
@@ -19,5 +20,6 @@ public class InGameIoC : MonoBehaviour
         AircraftMovementService = new TAircraftMovementManager(InputService);
         AircraftShootingService = new AircraftShootingManager();
         EnemyMovementService= new EnemyMovementManager();
+        EnemySpawnerService = new EnemySpawnerManager();
     }
 }
