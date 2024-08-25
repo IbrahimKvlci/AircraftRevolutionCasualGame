@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "RocketFire",
+                    "type": "Button",
+                    "id": "22e04c73-3e6a-464c-ba2a-821c530cedf2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -88,6 +97,17 @@
                     "action": "TurningByVector",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c98ce699-36ba-42d2-8696-c926eb644216",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RocketFire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

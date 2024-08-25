@@ -53,6 +53,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""RocketFire"",
+                    ""type"": ""Button"",
+                    ""id"": ""22e04c73-3e6a-464c-ba2a-821c530cedf2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -110,6 +119,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""TurningByVector"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c98ce699-36ba-42d2-8696-c926eb644216"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RocketFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -149,6 +169,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Aircraft_TurningLeft = m_Aircraft.FindAction("TurningLeft", throwIfNotFound: true);
         m_Aircraft_TurningRight = m_Aircraft.FindAction("TurningRight", throwIfNotFound: true);
         m_Aircraft_TurningByVector = m_Aircraft.FindAction("TurningByVector", throwIfNotFound: true);
+        m_Aircraft_RocketFire = m_Aircraft.FindAction("RocketFire", throwIfNotFound: true);
         // Camera
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_MousePos = m_Camera.FindAction("MousePos", throwIfNotFound: true);
@@ -216,6 +237,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Aircraft_TurningLeft;
     private readonly InputAction m_Aircraft_TurningRight;
     private readonly InputAction m_Aircraft_TurningByVector;
+    private readonly InputAction m_Aircraft_RocketFire;
     public struct AircraftActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -223,6 +245,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @TurningLeft => m_Wrapper.m_Aircraft_TurningLeft;
         public InputAction @TurningRight => m_Wrapper.m_Aircraft_TurningRight;
         public InputAction @TurningByVector => m_Wrapper.m_Aircraft_TurningByVector;
+        public InputAction @RocketFire => m_Wrapper.m_Aircraft_RocketFire;
         public InputActionMap Get() { return m_Wrapper.m_Aircraft; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -241,6 +264,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @TurningByVector.started += instance.OnTurningByVector;
             @TurningByVector.performed += instance.OnTurningByVector;
             @TurningByVector.canceled += instance.OnTurningByVector;
+            @RocketFire.started += instance.OnRocketFire;
+            @RocketFire.performed += instance.OnRocketFire;
+            @RocketFire.canceled += instance.OnRocketFire;
         }
 
         private void UnregisterCallbacks(IAircraftActions instance)
@@ -254,6 +280,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @TurningByVector.started -= instance.OnTurningByVector;
             @TurningByVector.performed -= instance.OnTurningByVector;
             @TurningByVector.canceled -= instance.OnTurningByVector;
+            @RocketFire.started -= instance.OnRocketFire;
+            @RocketFire.performed -= instance.OnRocketFire;
+            @RocketFire.canceled -= instance.OnRocketFire;
         }
 
         public void RemoveCallbacks(IAircraftActions instance)
@@ -322,6 +351,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnTurningLeft(InputAction.CallbackContext context);
         void OnTurningRight(InputAction.CallbackContext context);
         void OnTurningByVector(InputAction.CallbackContext context);
+        void OnRocketFire(InputAction.CallbackContext context);
     }
     public interface ICameraActions
     {

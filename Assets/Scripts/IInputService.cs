@@ -6,6 +6,7 @@ public interface IInputService
 {
     bool AircraftTurnLeftKeyDown();
     bool AircraftTurnRightKeyDown();
+    bool RocketFireButtonKey();
     Vector3 GetMousePositionOnWorldPoint();
     Vector3 GetMousePositionOnATarget();
     Vector2 GetTurningInput();

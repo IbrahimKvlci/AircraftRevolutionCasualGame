@@ -7,9 +7,11 @@ public class AircraftRocketShootingController : MonoBehaviour
     [field:SerializeField] public List<GameObject> RocketLocationList {  get; private set; }
 
     [SerializeField] private GameObject rocketPrefab;
+    [SerializeField] private float rocketFireDuration;
 
     private IInputService inputService;
 
+    private float rocketDurationtimer;
 
     private void Awake()
     {
@@ -23,8 +25,12 @@ public class AircraftRocketShootingController : MonoBehaviour
 
     private void HandleRocketShoot()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        rocketDurationtimer += Time.deltaTime;
+
+        if (inputService.RocketFireButtonKey()&& rocketDurationtimer >= rocketFireDuration)
         {
+            rocketDurationtimer = 0;
+
             Vector3 spawnPos = GetRandomSpawnPoint().position;
 
             Vector3 targetPos = inputService.GetMousePositionOnATarget();

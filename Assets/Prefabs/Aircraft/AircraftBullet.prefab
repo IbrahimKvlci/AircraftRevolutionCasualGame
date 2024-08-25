@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261706ea44454ad4b83f8a739208af1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Damage>k__BackingField: 5
   <RocketSpeed>k__BackingField: 50
   radius: 5
   enemyLayerMask:

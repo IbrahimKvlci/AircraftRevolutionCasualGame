@@ -62,4 +62,9 @@ public class InputManager :MonoBehaviour, IInputService
     {
         return inputActions.Aircraft.TurningByVector.ReadValue<Vector2>();
     }
+
+    public bool RocketFireButtonKey()
+    {
+        return inputActions.Aircraft.RocketFire.IsPressed();
+    }
 }
