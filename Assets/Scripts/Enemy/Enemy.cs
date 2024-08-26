@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     {
         _enemyMovementService = InGameIoC.Instance.EnemyMovementService;
 
-        EnemyHealth = new EnemyHealth();
+        EnemyHealth = new EnemyHealth(this);
 
         _enemyStateService = new EnemyStateManager();
 

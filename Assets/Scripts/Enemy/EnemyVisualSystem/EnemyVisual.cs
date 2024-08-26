@@ -34,7 +34,6 @@ public class EnemyVisual : MonoBehaviour
     private void SetEnemyColor(int maxLevel, int level)
     {
         float newRedValue = (float)(maxLevel - level) / (float)(maxLevel - 1);
-        Debug.Log(newRedValue);
         skinnedMeshRenderer.material.color = new Color(newRedValue, 0, 0);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     public Vector3 TargetPos { get; set; }
-    [field:SerializeField] public float Damage { get; set; }
+    public float Damage { get; set; }
 
     [field:SerializeField] public float RocketSpeed {  get; set; }
     [SerializeField] private float radius;

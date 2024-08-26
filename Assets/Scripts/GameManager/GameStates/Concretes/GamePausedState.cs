@@ -17,6 +17,12 @@ public class GamePausedState : GameStateBase
     public override void UpdateState()
     {
         base.UpdateState();
+        Time.timeScale = 0;
+
+        if (!_gameManager.IsGamePaused)
+        {
+            _gameStateService.SwitchState(_gameManager.GamePlayingState);
+        }
     }
 
     public override void ExitState()

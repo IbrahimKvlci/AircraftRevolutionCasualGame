@@ -6,6 +6,7 @@ public class AircraftIdleShootingController : MonoBehaviour
 {
     [field: SerializeField] public List<GameObject> ShootingLocationList { get; set; }
     [SerializeField] private Aircraft aircraft;
+    [SerializeField] private LayerMask enemyLayerMask;
 
     private IAircraftShootingService _aircraftShootingService;
 
@@ -29,7 +30,7 @@ public class AircraftIdleShootingController : MonoBehaviour
             timer = 0;
 
             Transform shootingTransfom = GetRandomShootingPos();
-            _aircraftShootingService.RaycastShoot(shootingTransfom.position, shootingTransfom.forward, aircraft.AircraftSO.idleAttackDamage);
+            _aircraftShootingService.RaycastShoot(shootingTransfom.position, shootingTransfom.forward, aircraft.AircraftSO.idleAttackDamage,enemyLayerMask);
         }
     }
 

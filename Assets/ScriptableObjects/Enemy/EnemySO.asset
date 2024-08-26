@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a771a76155bfa245bd437487b872d9f, type: 3}
   m_Name: EnemySO
   m_EditorClassIdentifier: 
-  healthMultiplier: 2
-  visualMultiplier: 0.05
+  healthMultiplier: 1
   speed: 1
   maxVisualScale: 5
   minVisualScale: 1

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IAircraftShootingService 
 {
-    void RaycastShoot(Vector3 shootPos,Vector3 shootDir,float damage);
+    void RaycastShoot(Vector3 shootPos,Vector3 shootDir,float damage,LayerMask enemyLayerMask);
 }

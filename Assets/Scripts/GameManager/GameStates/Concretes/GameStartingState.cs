@@ -15,14 +15,9 @@ public class GameStartingState : GameStateBase
     public override void EnterState()
     {
         base.EnterState();
-        _gameManager.EnemyLevelsByDifficulty = new List<int>(_gameManager.GameDifficultyCount);
-        for (int i = 0; i < _gameManager.GameDifficultyCount; i++)
-        {
-            _gameManager.EnemyLevelsByDifficulty.Add(_enemySO.maxLevel / _gameManager.GameDifficultyCount * (i + 1));
-        }
 
-        _gameManager.GameTime = 0;
-        _gameManager.GameDifficulty = 0;
+
+        _gameManager.ResetGame();
 
         _gameStateService.SwitchState(_gameManager.GamePlayingState);
     }

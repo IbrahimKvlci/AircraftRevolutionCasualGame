@@ -23,5 +23,9 @@ public class GameStateBase : IGameState
 
     public virtual void UpdateState()
     {
+        if (_gameManager.IsGameOver)
+        {
+            _gameStateService.SwitchState(_gameManager.GameOverState);
+        }
     }
 }
