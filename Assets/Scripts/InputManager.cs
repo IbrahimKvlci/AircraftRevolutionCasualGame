@@ -58,7 +58,7 @@ public class InputManager :MonoBehaviour, IInputService
         return Camera.main.ScreenToWorldPoint(_mousePosition);
     }
 
-    public Vector2 GetTurningInput()
+    public Vector2 GetMovementInput()
     {
         return inputActions.Aircraft.TurningByVector.ReadValue<Vector2>();
     }

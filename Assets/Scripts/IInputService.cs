@@ -9,5 +9,5 @@ public interface IInputService
     bool RocketFireButtonKey();
     Vector3 GetMousePositionOnWorldPoint();
     Vector3 GetMousePositionOnATarget();
-    Vector2 GetTurningInput();
+    Vector2 GetMovementInput();
 }

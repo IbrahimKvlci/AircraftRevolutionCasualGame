@@ -11,6 +11,7 @@ public class Rocket : MonoBehaviour
     [field:SerializeField] public float RocketSpeed {  get; set; }
     [SerializeField] private float radius;
     [SerializeField] private LayerMask enemyLayerMask;
+    [SerializeField] private ParticleSystem explosionFx;
 
     private Vector3 targetDir;
 
@@ -18,12 +19,13 @@ public class Rocket : MonoBehaviour
     {
         targetDir = (TargetPos - transform.position).normalized;
 
-        transform.forward = targetDir;
+        
     }
 
     private void Update()
     {
         transform.position += targetDir * Time.deltaTime * RocketSpeed;
+        transform.forward = Vector3.Lerp(transform.forward, targetDir, 0.05f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,8 +40,16 @@ public class Rocket : MonoBehaviour
                 Debug.Log("ROCKET");
             }
         }
+        if(!other.TryGetComponent<Aircraft>(out Aircraft aircraft))
+        {
+            ExplosionEffect();
+            Destroy(gameObject);
+        }
+    }
 
-        Destroy(gameObject);
+    private void ExplosionEffect()
+    {
+        Instantiate(explosionFx,transform.position,Quaternion.identity);
     }
 
   

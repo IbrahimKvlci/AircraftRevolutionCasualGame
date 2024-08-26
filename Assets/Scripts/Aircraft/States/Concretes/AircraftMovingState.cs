@@ -33,8 +33,8 @@ public class AircraftMovingState : AircraftStateBase
 
     private void HandleMovement()
     {
-        _aircraftMovementService.HandleMovement(_aircraft,_aircraft.Speed);
-        _aircraftMovementService.HandleTurning(_aircraft,_aircraft.AircraftSO.turningSpeed);
+        //_aircraftMovementService.HandleMovement(_aircraft,_aircraft.Speed);
+        _aircraftMovementService.HandleMovement(_aircraft,_aircraft.AircraftSO.turningSpeed);
     }
 
 

@@ -29,13 +29,13 @@ public class AircraftRocketShootingController : MonoBehaviour
     {
         rocketDurationtimer += Time.deltaTime;
 
-        if (inputService.RocketFireButtonKey()&& rocketDurationtimer >= rocketFireDuration)
+        if (rocketDurationtimer >= rocketFireDuration)
         {
             rocketDurationtimer = 0;
 
             Vector3 spawnPos = GetRandomSpawnPoint().position;
 
-            Vector3 targetPos = inputService.GetMousePositionOnATarget();
+            Vector3 targetPos = new Vector3(aircraft.transform.position.x,0,aircraft.transform.position.z+5);
 
             Vector3 rocketDir=targetPos - spawnPos;
             rocketDir.Normalize();

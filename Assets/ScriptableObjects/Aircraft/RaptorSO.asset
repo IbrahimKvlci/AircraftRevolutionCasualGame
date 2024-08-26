@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   speedMultiplier: 1
-  turningSpeed: 20
+  turningSpeed: 40
   idleAttackDamage: 1
   rocketAttackDamage: 2
   idleShootingDurationTime: 0.05

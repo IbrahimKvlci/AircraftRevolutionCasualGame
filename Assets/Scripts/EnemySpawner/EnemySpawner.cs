@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float spawningTimerDurationMax,spawningTimerDurationMin;
 
     [SerializeField] private Aircraft aircraft;
+    [SerializeField] private AircraftBase aircraftBase;
     [SerializeField] private Enemy enemyPrefab;
 
     private float timer,timerMax;
@@ -44,7 +45,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemyAtRandomPointAwayFromAircraft()
     {
-        Vector3 randomXPointAwayFromAircraft = new Vector3(Random.Range(spawningXPointStart, spawningXPointEnd), 0, aircraft.transform.position.z + spawningDistanceFromPlane);
+        Vector3 randomXPointAwayFromAircraft = new Vector3(Random.Range(spawningXPointStart, spawningXPointEnd), 0, aircraftBase.transform.position.z + spawningDistanceFromPlane);
         _enemySpawnerService.SpawnEnemyWithLevelAtPoint(randomXPointAwayFromAircraft, enemyPrefab, Random.Range(1,GameManager.Instance.GetMaxEnemyLevelAccordingToTheDifficulty()+1));
     }
 

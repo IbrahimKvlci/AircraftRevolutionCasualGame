@@ -15,20 +15,18 @@ public class TAircraftMovementManager : IAircraftMovementService
 
     public void HandleMovement(Aircraft aircraft, float speed)
     {
-        aircraft.transform.Translate(Vector3.forward * speed * Time.deltaTime);
-    }
-
-    public void HandleTurning(Aircraft aircraft, float speed)
-    {
-        if (!aircraft.AircraftTriggerController.CheckIsThereBarrier(AircraftTriggerController.BarrierLocationEnum.Right)&&_intputService.GetTurningInput().x>0)    
+        if (!aircraft.AircraftTriggerController.CheckIsThereBarrier(AircraftTriggerController.BarrierLocationEnum.Right)&&_intputService.GetMovementInput().x>0)    
         {
-            aircraft.transform.Translate(_intputService.GetTurningInput() * Time.deltaTime * speed);
+            aircraft.transform.Translate(new Vector3(_intputService.GetMovementInput().x,0,0) * Time.deltaTime * speed);
         }
-        if (!aircraft.AircraftTriggerController.CheckIsThereBarrier(AircraftTriggerController.BarrierLocationEnum.Left) && _intputService.GetTurningInput().x < 0)
+        if (!aircraft.AircraftTriggerController.CheckIsThereBarrier(AircraftTriggerController.BarrierLocationEnum.Left) && _intputService.GetMovementInput().x < 0)
         {
-            aircraft.transform.Translate(_intputService.GetTurningInput() * Time.deltaTime * speed);
+            aircraft.transform.Translate(new Vector3(_intputService.GetMovementInput().x, 0, 0) * Time.deltaTime * speed);
         }
-
+        if(!aircraft.AircraftTriggerController.CheckIsThereBarrier(AircraftTriggerController.BarrierLocationEnum.forward) && _intputService.GetMovementInput().y > 0)
+            aircraft.transform.Translate(new Vector3(0,0,_intputService.GetMovementInput().y)*Time.deltaTime*speed);
+        if (!aircraft.AircraftTriggerController.CheckIsThereBarrier(AircraftTriggerController.BarrierLocationEnum.back) && _intputService.GetMovementInput().y < 0)
+            aircraft.transform.Translate(new Vector3(0, 0, _intputService.GetMovementInput().y) * Time.deltaTime * speed);
     }
 
     public void HandleTurningOnce(Aircraft aircraft, float turningTime, Vector3 startingPos, Vector3 finishPos,out bool turningFinished)

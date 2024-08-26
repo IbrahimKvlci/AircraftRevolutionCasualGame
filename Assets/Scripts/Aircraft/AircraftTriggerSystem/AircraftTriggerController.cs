@@ -14,6 +14,8 @@ public class AircraftTriggerController : MonoBehaviour
     {
         Left,
         Right,
+        forward,
+        back,
     }
 
     public bool CheckIsThereBarrier(BarrierLocationEnum barrierLocationEnum)
@@ -23,6 +25,10 @@ public class AircraftTriggerController : MonoBehaviour
             direction = Vector3.left;
         else if(barrierLocationEnum == BarrierLocationEnum.Right)
             direction = Vector3.right;
+        else if(barrierLocationEnum==BarrierLocationEnum.forward)
+            direction = Vector3.forward;
+        else if(barrierLocationEnum==BarrierLocationEnum.back)
+            direction = Vector3.back;
 
         return Physics.Raycast(aircraft.transform.position, direction, barrierRaycastDistance);
     }

@@ -6,6 +6,7 @@ public class AircraftVisual : MonoBehaviour
 {
     [SerializeField] private List<GameObject> aircraftVisualList;
     [SerializeField] private Aircraft aircraft;
+    [SerializeField] private ParticleSystem VisualChangedParticle;
 
     private void Start()
     {
@@ -27,6 +28,8 @@ public class AircraftVisual : MonoBehaviour
 
     private void ChangeVisual()
     {
+        GameObject oldVisual=GetCurrentVisual();
+
         foreach (var item in aircraftVisualList)
         {
             item.SetActive(false);
@@ -43,5 +46,20 @@ public class AircraftVisual : MonoBehaviour
                 break;
             }
         }
+
+        if (oldVisual != GetCurrentVisual())
+        {
+            Instantiate(VisualChangedParticle,this.transform);
+        }
+    }
+
+    private GameObject GetCurrentVisual()
+    {
+        foreach (var item in aircraftVisualList)
+        {
+            if(item.activeSelf)
+                return item;
+        }
+        return null;
     }
 }
