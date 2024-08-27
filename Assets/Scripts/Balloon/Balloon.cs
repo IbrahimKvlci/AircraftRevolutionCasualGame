@@ -18,6 +18,7 @@ public class Balloon : MonoBehaviour
 
     private void DestroyBalloon()
     {
+        SoundManager.Instance.PlayAudioFromPool(SoundManager.Instance.AudioSO.balloonSound);
         Destroy(gameObject);
     }
 }

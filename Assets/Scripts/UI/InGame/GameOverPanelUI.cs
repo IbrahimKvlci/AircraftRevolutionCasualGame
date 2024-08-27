@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameOverPanelUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI scoreText,levelText;
+    [SerializeField] private TextMeshProUGUI scoreText,levelText,playAgainBtnText;
     [SerializeField] private Button playAgainBtn;
 
     [SerializeField] private Aircraft aircraft;
@@ -43,7 +43,8 @@ public class GameOverPanelUI : MonoBehaviour
     }
     private void UpdateLevelText()
     {
-        levelText.text = $"{aircraft.Level} LEVEL";
+        levelText.text = $"{aircraft.Level} {GameLanguageController.LevelText}";
+        playAgainBtnText.text = $"{GameLanguageController.PlayAgainText}";
     }
 
     private void Show()

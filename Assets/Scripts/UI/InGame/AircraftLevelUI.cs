@@ -22,6 +22,6 @@ public class AircraftLevelUI : MonoBehaviour
 
     private void UpdateLevelTxt()
     {
-        aircraftLevelTxt.text=$"{aircraft.Level} LEVEL";
+        aircraftLevelTxt.text=$"{aircraft.Level} {GameLanguageController.LevelText}";
     }
 }

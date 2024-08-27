@@ -35,6 +35,7 @@ public class AircraftMovingState : AircraftStateBase
     {
         //_aircraftMovementService.HandleMovement(_aircraft,_aircraft.Speed);
         _aircraftMovementService.HandleMovement(_aircraft,_aircraft.AircraftSO.turningSpeed);
+        SoundManager.Instance.PlayAudioLoopFromPool(SoundManager.Instance.AudioSO.aircraftEngineSound,0.5f);
     }
 
 

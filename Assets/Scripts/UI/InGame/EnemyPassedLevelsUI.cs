@@ -14,7 +14,7 @@ public class EnemyPassedLevelsUI : MonoBehaviour
     {
         enemyLevelsPassedController.OnEnemyPassedLevelsChanged += EnemyLevelsPassedController_OnEnemyPassedLevelsChanged;
 
-        enemyLevelsPassedMaxTxt.text = $"/{enemyLevelsPassedController.MaxEnemyLevelslPassed} LEVEL";
+        enemyLevelsPassedMaxTxt.text = $"/{enemyLevelsPassedController.MaxEnemyLevelslPassed} {GameLanguageController.LevelText}";
         UpdateEnemyLevelPassedText();
     }
 

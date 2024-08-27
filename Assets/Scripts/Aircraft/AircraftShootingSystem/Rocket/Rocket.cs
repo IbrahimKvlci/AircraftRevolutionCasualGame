@@ -50,6 +50,7 @@ public class Rocket : MonoBehaviour
     private void ExplosionEffect()
     {
         Instantiate(explosionFx,transform.position,Quaternion.identity);
+        SoundManager.Instance.PlayAudioFromPool(SoundManager.Instance.AudioSO.explosionSound,0.2f);
     }
 
   

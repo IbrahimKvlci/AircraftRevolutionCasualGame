@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class PausePanelUI : MonoBehaviour
 {
     [SerializeField] private Button resumeBtn,exitBtn;
     [SerializeField] private Button pauseBtn;
+    [SerializeField] private TextMeshProUGUI pausedTxt,resumeBtnTxt,exitBtnTxt;
 
     private void Awake()
     {
@@ -29,6 +31,9 @@ public class PausePanelUI : MonoBehaviour
 
     private void Start()
     {
+        pausedTxt.text = $"{GameLanguageController.PausedText}";
+        resumeBtnTxt.text = $"{GameLanguageController.ResumeText}";
+        exitBtnTxt.text =$"{GameLanguageController.ExitText}";
         HidePanel();
     }
 
