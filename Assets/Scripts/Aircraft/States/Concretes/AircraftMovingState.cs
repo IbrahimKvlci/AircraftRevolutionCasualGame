@@ -22,7 +22,7 @@ public class AircraftMovingState : AircraftStateBase
         base.UpdateState();
 
         HandleMovement();
-        _aircraft.AircraftIdleShootingController.HandleIdleShooting();
+        //_aircraft.AircraftIdleShootingController.HandleIdleShooting();
 
     }
 

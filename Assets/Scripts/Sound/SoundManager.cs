@@ -61,4 +61,9 @@ public class SoundManager : MonoBehaviour
         audioSource.volume = startVolume;
     }
 
+    public void StopAllSoundsInPool()
+    {
+        AudioPool.Instance.StopAllSounds();
+    }
+
 }

@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class GameOverPanelUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI scoreText,levelText,playAgainBtnText;
+    [SerializeField] private TextMeshProUGUI scoreText, levelText, playAgainBtnText;
     [SerializeField] private Button playAgainBtn;
 
     [SerializeField] private Aircraft aircraft;
+    [SerializeField] private GameObject backgroundBlur;
 
     private void Awake()
     {
@@ -50,10 +51,11 @@ public class GameOverPanelUI : MonoBehaviour
     private void Show()
     {
         gameObject.SetActive(true);
+        backgroundBlur.SetActive(true);
     }
     private void Hide()
     {
-
-    gameObject.SetActive(false); 
+        backgroundBlur.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

@@ -6,6 +6,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public event EventHandler OnScoreChanged;
+    public event EventHandler OnPausedChanged;
+
 
     [field: SerializeField] public int GameDifficultyCount { get; set; }
     [field: SerializeField] public float DifficultyChangingTime { get; set; }
@@ -19,7 +21,20 @@ public class GameManager : MonoBehaviour
     
     public int GameDifficulty { get; set; }
     public bool IsGameOver { get; set; }
-    public bool IsGamePaused { get; set; }
+
+    private bool _isGamePaused;
+    public bool IsGamePaused
+    {
+        get
+        {
+            return _isGamePaused;
+        }
+        set
+        {
+            _isGamePaused = value;
+            OnPausedChanged?.Invoke(this, EventArgs.Empty);
+        }
+    }
 
     private int _score;
     public int Score

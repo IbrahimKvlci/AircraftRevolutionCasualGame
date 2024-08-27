@@ -49,6 +49,14 @@ public class AudioPool : MonoBehaviour
         }
     }
 
+    public void StopAllSounds()
+    {
+        foreach (var item in AudioSourceList)
+        {
+            item.Stop();
+        }
+    }
+
     private AudioSource GetEmptyAudioSource()
     {
         foreach (AudioSource audioSourceItem in AudioSourceList)

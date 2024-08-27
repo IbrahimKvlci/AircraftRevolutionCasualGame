@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GamePausedState : GameStateBase
 {
+
     public GamePausedState(GameManager gameManager, IGameStateService gameStateService) : base(gameManager, gameStateService)
     {
     }

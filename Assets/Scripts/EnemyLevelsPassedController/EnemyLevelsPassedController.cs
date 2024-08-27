@@ -8,14 +8,14 @@ public class EnemyLevelsPassedController : MonoBehaviour
     public event EventHandler OnEnemyPassedLevelsChanged;
 
     [field: SerializeField] public int MaxEnemyLevelslPassed { get; set; }
-    [SerializeField] private Aircraft aircraft;
+    [SerializeField] private AircraftBase aircraftBase;
     public int TotalEnemyLevelsPassed { get; set; }
 
     private float zDistanceFromAircraf;
 
     private void Start()
     {
-        zDistanceFromAircraf = aircraft.transform.position.z - transform.position.z;
+        zDistanceFromAircraf = aircraftBase.transform.position.z - transform.position.z;
     }
 
     private void Update()
@@ -46,7 +46,7 @@ public class EnemyLevelsPassedController : MonoBehaviour
 
     private void FollowAircraft()
     {
-       transform.position=new Vector3(transform.position.x,transform.position.y,aircraft.transform.position.z-zDistanceFromAircraf);
+       transform.position=new Vector3(transform.position.x,transform.position.y, aircraftBase.transform.position.z-zDistanceFromAircraf);
 
     }
 }

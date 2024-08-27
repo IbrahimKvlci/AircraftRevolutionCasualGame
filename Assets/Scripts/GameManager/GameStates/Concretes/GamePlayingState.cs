@@ -47,6 +47,7 @@ public class GamePlayingState : GameStateBase
     public override void ExitState()
     {
         base.ExitState();
+        SoundManager.Instance.StopAllSoundsInPool();
     }
 
     private void ChangeGameDifficulty()

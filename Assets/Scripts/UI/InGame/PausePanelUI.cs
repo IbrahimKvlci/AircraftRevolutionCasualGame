@@ -9,6 +9,7 @@ public class PausePanelUI : MonoBehaviour
     [SerializeField] private Button resumeBtn,exitBtn;
     [SerializeField] private Button pauseBtn;
     [SerializeField] private TextMeshProUGUI pausedTxt,resumeBtnTxt,exitBtnTxt;
+    [SerializeField] private GameObject backgroundBlur;
 
     private void Awake()
     {
@@ -40,10 +41,12 @@ public class PausePanelUI : MonoBehaviour
     private void ShowPanel()
     {
         gameObject.SetActive(true);
+        backgroundBlur.SetActive(true);
     }
 
     private void HidePanel()
     {
+        backgroundBlur.SetActive(false);
         gameObject.SetActive(false);
     }
 }
