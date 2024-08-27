@@ -7,16 +7,23 @@ public class GamePlayingState : GameStateBase
 {
     private float scoreTimer;
     private float scoreTimerMax;
+    private float highScoreTimer;
 
-    public GamePlayingState(GameManager gameManager, IGameStateService gameStateService) : base(gameManager, gameStateService)
+    private IGameReadyService _gameReadyService;
+
+    public GamePlayingState(GameManager gameManager, IGameStateService gameStateService, IGameReadyService gameReadyService) : base(gameManager, gameStateService)
     {
+        _gameReadyService = gameReadyService;
     }
 
     public override void EnterState()
     {
         base.EnterState();
+        _gameReadyService.GameStart();
+
         scoreTimer = 0;
         scoreTimerMax = 0.2f;
+        highScoreTimer = 0;
     }
 
     public override void UpdateState()
@@ -42,11 +49,20 @@ public class GamePlayingState : GameStateBase
         {
             _gameStateService.SwitchState(_gameManager.GamePausedState);
         }
+
+        highScoreTimer += Time.deltaTime;
+        if (_gameManager.Score > _gameManager.HighScore&&highScoreTimer>=10f)
+        {
+            highScoreTimer = 0;
+            _gameManager.HighScore = _gameManager.Score;
+        }
     }
 
     public override void ExitState()
     {
         base.ExitState();
+        _gameReadyService.GameStop();
+
         SoundManager.Instance.StopAllSoundsInPool();
     }
 

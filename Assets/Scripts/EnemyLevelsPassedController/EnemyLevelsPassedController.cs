@@ -9,7 +9,21 @@ public class EnemyLevelsPassedController : MonoBehaviour
 
     [field: SerializeField] public int MaxEnemyLevelslPassed { get; set; }
     [SerializeField] private AircraftBase aircraftBase;
-    public int TotalEnemyLevelsPassed { get; set; }
+
+    private int _totalEnemyLevelsPassed;
+    public int TotalEnemyLevelsPassed
+    {
+        get
+        {
+            return _totalEnemyLevelsPassed;
+        }
+        set
+        {
+            _totalEnemyLevelsPassed = value;
+            OnEnemyPassedLevelsChanged?.Invoke(this, EventArgs.Empty);
+
+        }
+    }
 
     private float zDistanceFromAircraf;
 
@@ -35,7 +49,6 @@ public class EnemyLevelsPassedController : MonoBehaviour
     private void AddEnemyLevelToTheTotalEnemyLevelsPassed(int level)
     {
         TotalEnemyLevelsPassed += level;
-        OnEnemyPassedLevelsChanged?.Invoke(this, EventArgs.Empty);
 
         if(TotalEnemyLevelsPassed >= MaxEnemyLevelslPassed)
         {

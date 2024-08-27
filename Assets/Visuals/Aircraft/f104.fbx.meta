@@ -1,0 +1,604 @@
+fileFormatVersion: 2
+guid: c77dd983a75aafb43b1834e050c9f96d
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: _empty_collimator
+    second: {fileID: 2800000, guid: 02a82c5c04f75a2489482db00448d093, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ab958c88
+    second: {fileID: 2800000, guid: 39fac623094fa854bb5a88679f8b406a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: an_ale_40_dispenser_c
+    second: {fileID: 2800000, guid: 448522989feb939488c6ac57da136628, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: an_ale_40_dispenser_n_s
+    second: {fileID: 2800000, guid: 3b6c9408e0ecde34aa742895577e635c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: de_gauge_clock_type_fl_23885_bo_uk1_c
+    second: {fileID: 2800000, guid: facbf8ce5c127844793daa75a12ff53f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: de_gauge_clock_type_fl_23885_bo_uk1_n_s
+    second: {fileID: 2800000, guid: 3f3d02f295d9c314f9d26f17320269dc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104_pylon2_metal_c
+    second: {fileID: 2800000, guid: ee35b9a59c9b1ad4aa1d618f1644072d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104_pylon2_metal_n_s
+    second: {fileID: 2800000, guid: 641e62466e1446f44a3f8253218efdf9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104_pylon_metal_c
+    second: {fileID: 2800000, guid: 78bbd012eff30ac4ba589d938c1ed7db, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104_pylon_metal_n_s
+    second: {fileID: 2800000, guid: 7f4838c2a15f56146bb86ce781d40eca, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104gLuft
+    second: {fileID: 2800000, guid: a409a0679faa3a34e8a6b0e7fd9282ea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_c
+    second: {fileID: 2800000, guid: e8e580493010b2e4d9d7cebc4f88a6d8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_cockpit_1_c
+    second: {fileID: 2800000, guid: 5330168ea7052074e89d55aef8a49f8e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_cockpit_1_n_s
+    second: {fileID: 2800000, guid: fc0dec8dfe6d5c148ae0dcc55d79c093, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_cockpit_2_c
+    second: {fileID: 2800000, guid: 4ca7b38a6098c694999fbd52ece115f3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_cockpit_2_n_s
+    second: {fileID: 2800000, guid: 1f8f64de362bca24288f68013e4f01fe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_cockpit_c
+    second: {fileID: 2800000, guid: 195b717df3102ab4b88e3b74c74c7abf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_cockpit_control_stick_c
+    second: {fileID: 2800000, guid: 6fce94ec72c63fa4c91497c6db135bd4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_cockpit_control_stick_n_s
+    second: {fileID: 2800000, guid: f3585df73f6c82c4eba5effb70d899cd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_cockpit_labels_c
+    second: {fileID: 2800000, guid: 3dd937d4ef288c4478456ebd046fdc91, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_cockpit_labels_n_s
+    second: {fileID: 2800000, guid: 48a7373865493684780d5861eb8fd84d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_cockpit_n_s
+    second: {fileID: 2800000, guid: 6cd141c5c1db9a744a198ed716dde44b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_interior_c
+    second: {fileID: 2800000, guid: 4e83af52ef2b0cd459857db1cde67b58, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_interior_n_s
+    second: {fileID: 2800000, guid: 85ea5b44ad6750a45a76532e05601cc7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_n_s
+    second: {fileID: 2800000, guid: 4a451eb2c39820649b510ab13a4e84dd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_pylon_bomb1_c
+    second: {fileID: 2800000, guid: 24d8ad447db47ed4ebf2ab0b63b9409f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104g_pylon_bomb1_n_s
+    second: {fileID: 2800000, guid: c727531a97f725f4baebc5420c6dc54b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104s_inside_a
+    second: {fileID: 2800000, guid: 0093df0d334aa3a47839fab76765666a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f_104s_inside_n_s
+    second: {fileID: 2800000, guid: 58d280da7b151244893d6d2ed37f2df9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fr_rocket_pylon_aa20_c
+    second: {fileID: 2800000, guid: 9bb548de5c19faf46a621e06a1b9baab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fr_rocket_pylon_aa20_n_s
+    second: {fileID: 2800000, guid: 279e4922abf43174b906dba9c5802eb3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: glass_dirt
+    second: {fileID: 2800000, guid: 870fe162d334c6c4699e193b2077edb8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: glass_dirt_a
+    second: {fileID: 2800000, guid: c7e8cd57df526ff44862b7d450698eef, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lau32_mod5_launcher_c
+    second: {fileID: 2800000, guid: 11bc8127fe058b645860672ba4692e73, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lau32_mod5_launcher_n_s
+    second: {fileID: 2800000, guid: 4801c4108571acc4fa6d338ac7d87085, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lens_glass
+    second: {fileID: 2800000, guid: ddcc69b7710ad644b8137da22182853b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lens_glass_a
+    second: {fileID: 2800000, guid: f28a1b228daa26d4f8f8aa81b967bd86, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: normalmap
+    second: {fileID: 2800000, guid: d8de8afc6b2fe8d4aabd58be68341d1c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: seat
+    second: {fileID: 2800000, guid: bad13f1ba51bbde469abe122662b03ae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: seat_martin_baker_type_gq_7a_n_s
+    second: {fileID: 2800000, guid: 47df0d188267a414aa1fc6f9f19fc165, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_accelerometer_type_10g_c
+    second: {fileID: 2800000, guid: 32e10e579a6056748acdc9334e73ce07, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_accelerometer_type_10g_n_s
+    second: {fileID: 2800000, guid: 5272b3cea699484468526964dd9f57e8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_additional_autonomous_horizon_c
+    second: {fileID: 2800000, guid: 2faf23295c3a5014cbd69fa74f8eed22, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_additional_autonomous_horizon_n_s
+    second: {fileID: 2800000, guid: e3f1188299011fc4c975ef2f3a451888, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_air_temperature_in_front_of_the_turbine_c
+    second: {fileID: 2800000, guid: e8fe564de2a077a4b8a70d5dffb27e1a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_air_temperature_in_front_of_the_turbine_n_s
+    second: {fileID: 2800000, guid: 22e4468b5b7ae6149af65049813a7cfe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_altitude_control_trim_position_c
+    second: {fileID: 2800000, guid: e82e0f3c5cfbbe84b8f7b71f1654b00b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_altitude_control_trim_position_n_s
+    second: {fileID: 2800000, guid: 193c0262343b98e488e865dc0394b355, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_angle_of_attack_indicator_c
+    second: {fileID: 2800000, guid: b432c3db2ee3d8c4da9a7a82a19d82ed, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_angle_of_attack_indicator_n_s
+    second: {fileID: 2800000, guid: 8fc045bb00f59604cbfebe430c0a8974, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_aviahorizon_id_4012d_c
+    second: {fileID: 2800000, guid: 8f06225ec86dc134892c6915212c05e7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_aviahorizon_id_4012d_n_s
+    second: {fileID: 2800000, guid: 352b62330ede7d74591cd6b80f4f5962, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_bank_a
+    second: {fileID: 2800000, guid: 3734a9a2dd3e3704389dc9eb4f110671, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_bank_n_s
+    second: {fileID: 2800000, guid: 87ca3907592c11c459ac11d68dcc4952, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_barometric_altimeter_type_aau_37_a_c
+    second: {fileID: 2800000, guid: 61dfaa1a051715145b71eaef7caa60f0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_barometric_altimeter_type_aau_37_a_n_s
+    second: {fileID: 2800000, guid: e92b891c52002044e8b7da17ee05691b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_cabin_altitude_a
+    second: {fileID: 2800000, guid: dd757fa854b07e943bef909295025e83, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_cabin_altitude_n_s
+    second: {fileID: 2800000, guid: f01c5b43dbdcfe4499ff4ae381b77c4a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_compass_type_ms_17983_2_c
+    second: {fileID: 2800000, guid: 30634c74a2714ee40ae461ff4bf2e4b9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_compass_type_ms_17983_2_n_s
+    second: {fileID: 2800000, guid: 95d7ede146ebd3844ac7d6c7f7d42c72, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_fuel_flow_12000_1_c
+    second: {fileID: 2800000, guid: f5cb2c0ea7cb8c14e803805e9628dbe5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_fuel_flow_12000_1_n_s
+    second: {fileID: 2800000, guid: 1c01e51dda722494b92e1d8c3db0e2d7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_fuel_in_internal_tanks_c
+    second: {fileID: 2800000, guid: 56e13f7e05d1f714a884c5ab4e2e29d8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_fuel_in_internal_tanks_n_s
+    second: {fileID: 2800000, guid: 55b6b823fd950b44388b451df566eac8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_fuel_in_outboard_tanks_c
+    second: {fileID: 2800000, guid: dc09697006fee244ab28773123947806, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_fuel_in_outboard_tanks_n_s
+    second: {fileID: 2800000, guid: 6cc655d5b1ccb844893acd73efd7638e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_gas_temperature_a
+    second: {fileID: 2800000, guid: fd2c102aa969b124e8c025cc199c855b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_gas_temperature_n_s
+    second: {fileID: 2800000, guid: 20a222fb851c81c4c9cd50f5c23bd78f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_ground_speed_error_indicator_c
+    second: {fileID: 2800000, guid: 578da5d990e67294198c183a5cd2e1f5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_ground_speed_error_indicator_n_s
+    second: {fileID: 2800000, guid: 38f6b031b923c5a449c51158ea3be8e6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_liquid_oxygen_quantity_indicator_c
+    second: {fileID: 2800000, guid: b36d1bd448bd5ae48887b6ab0beba371, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_liquid_oxygen_quantity_indicator_n_s
+    second: {fileID: 2800000, guid: ef55b4d66ddbc6149b5d157409c10530, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_nozzle_position_indicator_c
+    second: {fileID: 2800000, guid: 712cb85bb9801e84682570be49e09f78, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_nozzle_position_indicator_n_s
+    second: {fileID: 2800000, guid: 191739f53c623054c8237c7888a3bb85, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_oil_indicator_c
+    second: {fileID: 2800000, guid: b1a512ccfa097bf4b80ccb10e4585551, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_oil_indicator_n_s
+    second: {fileID: 2800000, guid: c6650dcaf8ec7df458c0be3cea92d64f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_oil_pressure1_100_c
+    second: {fileID: 2800000, guid: 59c282bf7aa2b5b4bbf6d97ef1d3bc96, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_oil_pressure1_100_n_s
+    second: {fileID: 2800000, guid: 1178601db6c33e541bbc87dbc58bb3d5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_position_indicator_and_course_type_phi_4a_c
+    second: {fileID: 2800000, guid: 405fb6118a763354da6326260200e112, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_position_indicator_and_course_type_phi_4a_disk_c
+    second: {fileID: 2800000, guid: 912e010b656dc6f438afb70ed1131e08, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_position_indicator_and_course_type_phi_4a_disk_n_s
+    second: {fileID: 2800000, guid: 44856c435b8ef16489d8bd39ecb143d6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_position_indicator_and_course_type_phi_4a_n_s
+    second: {fileID: 2800000, guid: 37f31e7524e458a4eb509f7fee3819b8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_pressure_hydraulic_system_type_x1000_c
+    second: {fileID: 2800000, guid: b4fcf1031d7d1634e9b0aa00a28e81cc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_pressure_hydraulic_system_type_x1000_n_s
+    second: {fileID: 2800000, guid: b8690b4acc834c248bfad9b2733e3365, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_radar_display_with_control_ panel_c
+    second: {fileID: 2800000, guid: 06a887bbff4247d4e8bcc6ded2b66ad9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_radar_display_with_control_ panel_glass_c
+    second: {fileID: 2800000, guid: 4376d45d7f1a93444874156cb5ebb539, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_radar_display_with_control_ panel_n_s
+    second: {fileID: 2800000, guid: 29187669159f6ae4e83b2d16ccf3d352, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_rpm_type_100_9_c
+    second: {fileID: 2800000, guid: 958f2a598e10a944787512dbb12260d5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_rpm_type_100_9_n_s
+    second: {fileID: 2800000, guid: cf4f919790a1bfa4d9e76657cdc8b1f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_speed_indicator_mtype_avu_8_a_c
+    second: {fileID: 2800000, guid: a6d37bc710c9ba744816fc1dbcb4055c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_speed_indicator_mtype_avu_8_a_n_s
+    second: {fileID: 2800000, guid: f714cab7560de054e9b37cff156f5577, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_timer_c
+    second: {fileID: 2800000, guid: aecd4c5163273ca41a5ff4104c27b842, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_timer_n_s
+    second: {fileID: 2800000, guid: 441f4349e4bdc9b4dbdd141931b658b1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_vario_type_c_2_c
+    second: {fileID: 2800000, guid: d2417321aeaf8c64ea0225c96e2947e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_vario_type_c_2_n_s
+    second: {fileID: 2800000, guid: 07dfab7d6f79cfe45904fe9a3167cbf2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_wind_unit_c
+    second: {fileID: 2800000, guid: bfa9329bd1e21a549bc3352d9371856a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: us_gauge_wind_unit_n_s
+    second: {fileID: 2800000, guid: dcaef9f17d84bfc4d83b3a775e268529, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: zflare_green
+    second: {fileID: 2800000, guid: 31a6d8cd4f0cee440bbf097f5c9872db, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: zflare_green_a
+    second: {fileID: 2800000, guid: 96ed54d5504eda749b50c22a6cb9facf, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

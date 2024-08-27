@@ -9,8 +9,14 @@ public class JoyisticUI : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.OnPausedChanged += Instance_OnPausedChanged;
+        GameManager.Instance.OnContinueGame += Instance_OnContinueGame;
         ((GameOverState)GameManager.Instance.GameOverState).OnGameOver += JoyisticUI_OnGameOver;
 
+        Show();
+    }
+
+    private void Instance_OnContinueGame(object sender, System.EventArgs e)
+    {
         Show();
     }
 

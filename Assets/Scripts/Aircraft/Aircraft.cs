@@ -27,6 +27,8 @@ public class Aircraft : MonoBehaviour
     }
 
     public float Speed { get; set; }
+    public float TurningSpeed { get; set; }
+
 
     public IAircraftState AircraftFreezingState { get; set; }
     public IAircraftState AircraftMovingState { get; set; }
@@ -51,6 +53,7 @@ public class Aircraft : MonoBehaviour
 
         Level = 1;
         Speed = AircraftSO.speed;
+        TurningSpeed= AircraftSO.turningSpeed;
     }
 
     private void Update()
@@ -62,6 +65,8 @@ public class Aircraft : MonoBehaviour
     {
         Level += level;
         Speed += level*AircraftSO.speedMultiplier;
+        AircraftRocketShootingController.RocketDamage += level * AircraftRocketShootingController.rocketDamageMultiplier;
+
     }
 
 }

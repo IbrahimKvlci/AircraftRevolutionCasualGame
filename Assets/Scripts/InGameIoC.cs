@@ -12,6 +12,7 @@ public class InGameIoC : MonoBehaviour
     public IEnemyMovementService EnemyMovementService { get; set; }
     public IEnemySpawnerService EnemySpawnerService { get; set; }
     public IBalloonSpawnerService BalloonSpawnerService { get; set; }
+    public ISavingDataService SavingDataService { get; set; }
 
     private void Awake()
     {
@@ -23,5 +24,6 @@ public class InGameIoC : MonoBehaviour
         EnemyMovementService= new EnemyMovementManager();
         EnemySpawnerService = new EnemySpawnerManager();
         BalloonSpawnerService=new BalloonSpawnerManager();
+        SavingDataService = new YDSavingManager();
     }
 }

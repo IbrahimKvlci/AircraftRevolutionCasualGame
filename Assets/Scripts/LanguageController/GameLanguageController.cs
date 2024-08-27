@@ -2,10 +2,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
-public class GameLanguageController
+public class GameLanguageController:MonoBehaviour
 {
     public static event EventHandler OnLanguageChanged;
+
+    private ILanguageService languageService;
+
+    private void Awake()
+    {
+        languageService = BasicIoC.Instance.LanguageService;
+    }
+
+    private void Start()
+    {
+        BasicIoC.Instance.GameReadyService.GameReady();
+
+        YandexGame.LanguageRequest();
+        Language = languageService.GetLanguagesEnum();
+    }
 
     public enum LanguagesEnum
     {
@@ -13,7 +29,7 @@ public class GameLanguageController
         English,
     }
 
-    private static LanguagesEnum _language=LanguagesEnum.Russian;
+    private static LanguagesEnum _language;
     public static LanguagesEnum Language
     {
 
@@ -107,6 +123,42 @@ public class GameLanguageController
                     break;
                 default:
                     return "EXIT";
+                    break;
+            }
+        }
+    }
+    public static string HighScoreText
+    {
+        get
+        {
+            switch (Language)
+            {
+                case LanguagesEnum.Russian:
+                    return "РЕКОРД";
+                    break;
+                case LanguagesEnum.English:
+                    return "HIGH SCORE";
+                    break;
+                default:
+                    return "HIGH SCORE";
+                    break;
+            }
+        }
+    }
+    public static string ContinueWatchText
+    {
+        get
+        {
+            switch (Language)
+            {
+                case LanguagesEnum.Russian:
+                    return "ПРОДОЛЖИТЬ?\nСМОТРЕТЬ";
+                    break;
+                case LanguagesEnum.English:
+                    return "CONTINUE?\nWATCH";
+                    break;
+                default:
+                    return "CONTINUE\nWATCH";
                     break;
             }
         }

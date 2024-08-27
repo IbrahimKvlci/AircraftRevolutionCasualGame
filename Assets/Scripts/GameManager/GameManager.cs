@@ -6,7 +6,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public event EventHandler OnScoreChanged;
+    public event EventHandler OnHighScoreChanged;
     public event EventHandler OnPausedChanged;
+    public event EventHandler OnContinueGame;
 
 
     [field: SerializeField] public int GameDifficultyCount { get; set; }
@@ -14,6 +16,7 @@ public class GameManager : MonoBehaviour
     
 
     [SerializeField] private EnemySO enemySO;
+    [SerializeField] private EnemyLevelsPassedController enemyLevelsPassedController;
 
     public List<int> EnemyLevelsByDifficulty {  get; set; }
 
@@ -43,6 +46,19 @@ public class GameManager : MonoBehaviour
         set { _score = value; 
             OnScoreChanged?.Invoke(this, EventArgs.Empty); } 
     }
+    private int _hughScore;
+    public int HighScore
+    {
+        get
+        {
+            return _hughScore;
+        }
+        set
+        {
+            _hughScore = value;
+            OnHighScoreChanged?.Invoke(this, EventArgs.Empty);
+        }
+    }
 
     public IGameState GameStartingState {  get; set; }
     public IGameState GamePlayingState { get; set; }
@@ -53,14 +69,17 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; set; }
 
+    private IGameReadyService _gameReadyService;
+
     private void Awake()
     {
         Instance = this;
+        _gameReadyService=BasicIoC.Instance.GameReadyService;
 
         GameStateService = new GameStateManager();
 
         GameStartingState = new GameStartingState(this,GameStateService,enemySO);
-        GamePlayingState=new GamePlayingState(this,GameStateService);
+        GamePlayingState=new GamePlayingState(this,GameStateService,_gameReadyService);
         GamePausedState=new GamePausedState(this,GameStateService);
         GameOverState=new GameOverState(this,GameStateService);
 
@@ -94,5 +113,14 @@ public class GameManager : MonoBehaviour
         Score = 0;
         IsGameOver = false;
         IsGamePaused = false;
+    }
+
+    public void ContinueGame()
+    {
+        IsGameOver = false;
+        enemyLevelsPassedController.TotalEnemyLevelsPassed = 0;
+        GameStateService.SwitchState(GamePlayingState);
+
+        OnContinueGame?.Invoke(this, EventArgs.Empty);
     }
 }

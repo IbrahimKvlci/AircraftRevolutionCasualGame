@@ -9,7 +9,7 @@ public class AircraftRocketShootingController : MonoBehaviour
     [SerializeField] private GameObject rocketPrefab;
     [field:SerializeField] public float rocketFireDuration {  get;  set; }
     [SerializeField] private Aircraft aircraft;
-    [SerializeField] private float rocketDamageMultiplier;
+    [field:SerializeField] public float rocketDamageMultiplier {  get; set; }
 
     public float RocketDamage { get; set; }
 
@@ -48,7 +48,6 @@ public class AircraftRocketShootingController : MonoBehaviour
             rocketDir.Normalize();
 
             Rocket rocket = Instantiate(rocketPrefab,spawnPos ,Quaternion.identity ).GetComponent<Rocket>();
-            RocketDamage += aircraft.Level * rocketDamageMultiplier;
             rocket.Damage =  RocketDamage;
             rocket.TargetPos = targetPos;
         }

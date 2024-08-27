@@ -37,7 +37,7 @@ public class AircraftVisual : MonoBehaviour
 
         for (int i = aircraftVisualList.Count; i >= 0; i--)
         {
-            if (aircraft.Level >= (100 / aircraftVisualList.Count) * (i))
+            if (aircraft.Level >= (40 / aircraftVisualList.Count) * (i))
             {
                 if(i==aircraftVisualList.Count)
                     aircraftVisualList[i-1].SetActive(true);
@@ -49,9 +49,9 @@ public class AircraftVisual : MonoBehaviour
 
         if (oldVisual != GetCurrentVisual() && oldVisual!=null)
         {
-            aircraft.Speed *= 1.5f;
-            aircraft.AircraftRocketShootingController.RocketDamage *= 1.5f;
-            aircraft.AircraftRocketShootingController.rocketFireDuration /= 2f;
+            aircraft.AircraftRocketShootingController.RocketDamage *= 1.2f;
+            aircraft.AircraftRocketShootingController.rocketFireDuration /= 1.2f;
+            //aircraft.TurningSpeed;
             Instantiate(VisualChangedParticle,this.transform);
         }
     }

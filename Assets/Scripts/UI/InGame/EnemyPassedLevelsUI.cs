@@ -34,7 +34,8 @@ public class EnemyPassedLevelsUI : MonoBehaviour
         enemyLevelsPassedTxt.text = enemyLevelsPassedController.TotalEnemyLevelsPassed.ToString();
 
         switch (enemyLevelsPassedController.MaxEnemyLevelslPassed/(enemyLevelsPassedController.TotalEnemyLevelsPassed+1))
-        {
+        { 
+
             case 3:
                 enemyLevelsPassedTxt.color = Color.yellow;
                 break;
@@ -44,6 +45,7 @@ public class EnemyPassedLevelsUI : MonoBehaviour
             case 0:
                 enemyLevelsPassedTxt.color=Color.red; break;
             default:
+                enemyLevelsPassedTxt.color = Color.green;
                 break;
         }
     }
